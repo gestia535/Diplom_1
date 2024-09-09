@@ -8,11 +8,6 @@ from praktikum.ingredient import Ingredient
 
 
 @pytest.fixture
-def burger():
-    return Burger()
-
-
-@pytest.fixture
 def mock_bun():
     mock_bun = Mock()
     mock_bun.get_name.return_value = TestingData.bun_name
@@ -47,8 +42,3 @@ def ingredient():
 def bun_test():
     bun = Bun('Флюоресцентная булка R2-D3', 988)
     return bun
-
-
-@pytest.fixture
-def database():
-    return Database()
